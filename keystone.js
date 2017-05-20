@@ -74,5 +74,18 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	+ '\nset up your mailgun integration');
 }
 
+keystone.set('cloudinary config', { cloud_name: 'sailfuture', api_key: '156538295759511', api_secret: 'TksVw6XiOA9NHaxMTRqTByh99wY' });
+// or
+keystone.set('cloudinary config', 'cloudinary://api_key:api_secret@cloud_name' );
+ 
+// optional, will prefix all built-in tags with 'keystone_'
+keystone.set('cloudinary prefix', 'keystone');
+ 
+// optional, will prefix each image public_id with [{prefix}]/{list.path}/{field.path}/
+keystone.set('cloudinary folders', true);
+ 
+// optional, will force cloudinary to serve images over https
+keystone.set('cloudinary secure', true);
+
 
 keystone.start();
