@@ -24,7 +24,6 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
 		{ label: 'Contact', key: 'contact', href: '/contact' },
 		{ label: 'Store', key: 'store', href: '/products' },
-		{ label: 'contactform', key: 'contactform', href: '/contactform' },
 	];
 	res.locals.user = req.user;
 	next();
